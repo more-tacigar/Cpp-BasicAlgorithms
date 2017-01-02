@@ -1,6 +1,8 @@
 #ifndef ALGORITHM_QUICKSORT_HPP
 #define ALGORITHM_QUICKSORT_HPP
 
+#include <algorithm>
+
 namespace algorithm {
 
 template <class BidirectionalIterator>
