@@ -5,6 +5,7 @@
 #include <algorithm/quicksort.hpp>
 #include <algorithm/mergesort.hpp>
 #include <algorithm/binarysearch.hpp>
+#include <algorithm/simplesort.hpp>
 
 template <class ForwardIterator>
 void print(ForwardIterator first, ForwardIterator last)
@@ -22,7 +23,7 @@ int main()
   algorithm::quicksort(std::begin(vector1), std::end(vector1));
   print(std::begin(vector1), std::end(vector1));
 
-  std::vector<int> vector2 = { 10, 50, 20, 25, 70, 80, 40, 30, 10, 100, 10 };
+  std::vector<int> vector2 = { 10, 50, 20, 20, 70, 80, 40, 30, 10, 100, 10 };
   algorithm::mergesort(std::begin(vector2), std::end(vector2));
   print(std::begin(vector2), std::end(vector2));
 
@@ -31,6 +32,11 @@ int main()
          == std::end(vector3));
   assert(algorithm::binarysearch(std::begin(vector3), std::end(vector3), 50)
          == std::begin(vector3) + 3);
+
+  std::vector<int> vector4 = { 10, 50, 20, 20, 70, 80, 40, 30, 10, 100, 10 };
+  algorithm::simplesort(std::begin(vector4), std::end(vector4));
+  print(std::begin(vector4), std::end(vector4));
+  
   return 0;
 }
     
