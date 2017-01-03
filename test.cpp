@@ -6,6 +6,7 @@
 #include <algorithm/mergesort.hpp>
 #include <algorithm/binarysearch.hpp>
 #include <algorithm/simplesort.hpp>
+#include <algorithm/fibonacci.hpp>
 
 template <class ForwardIterator>
 void print(ForwardIterator first, ForwardIterator last)
@@ -36,7 +37,10 @@ int main()
   std::vector<int> vector4 = { 10, 50, 20, 20, 70, 80, 40, 30, 10, 100, 10 };
   algorithm::simplesort(std::begin(vector4), std::end(vector4));
   print(std::begin(vector4), std::end(vector4));
-  
+
+  assert(algorithm::fibonacci(10) == 55);
+  assert(algorithm::memorized_fibonacci(10) == 55);
+  assert(algorithm::dp_fibonacci(10) == 55);
+
   return 0;
 }
-    
